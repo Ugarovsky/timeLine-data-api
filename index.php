@@ -1,3 +1,4 @@
+<?php include './routing/service.php';?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="he-il" lang="he-il" dir="rtl">
 <head>
@@ -35,7 +36,7 @@
                     <div class="thumb"></div>
                 </div>
                 <div class="viewport" style="width: 1366px;">
-                    <div class="overview" style="transform: translateX(-2469.24px); left: 0px;">
+                    <div class="overview" id="overview" style="transform: translateX(-2469.24px); left: 0px;">
                         <div class="timeline-year" style="display: block;" data-role="timeline-year">
                             <div class="year-inner">
                                 <div class="year-images bg-background-light ">
@@ -1013,8 +1014,8 @@
                 <p style="text-align: center;"><span style="font-size: 10pt;">&nbsp;<span style="color: #ff0000;">מצאתם
                             טעות? מעוניינים להסיר תמונה? ספרו לנו ונתק</span></span><span
                         style="color: #ff0000;">ן&nbsp;</span><span style="color: #ff0000; font-size: 10pt;"><span
-                            style="font-family: &#39;normal arial&#39;, sans-serif;">sipurmekomy</span><span
-                            style="font-family: &#39;normal arial&#39;, sans-serif;">@gmail.com</span></span></p>
+                            style="font-family: normal arial, sans-serif;">sipurmekomy</span><span
+                            style="font-family: normal arial, sans-serif;">@gmail.com</span></span></p>
             </div>
         </div>
     </div>
@@ -2599,6 +2600,7 @@
 
     <script src='./js/domBehaviours.js'></script>
     <script src="./js/timeLineController.js"></script>
-</body>
+    <script src='./js/dataRender.js'></script>
+    </body>
 
 </html>
