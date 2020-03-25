@@ -1,0 +1,360 @@
+       
+            html .c-background,
+            html.c-background,
+            body.c-background,
+            body .c-background {
+                color: #d6d1c7;
+            }
+           
+            html .bg-background,
+            html.bg-background,
+            body .bg-background,
+            body.bg-background {
+                background-color: #d6d1c7;
+            } 
+
+            
+            :root {
+                --c-background: #d6d1c7;
+            }
+           
+            
+            
+ 
+            html .c-background-light,
+            html.c-background-light,
+            body.c-background-light,
+            body .c-background-light {
+                color: #ffffff;
+            }
+           
+            html .bg-background-light,
+            html.bg-background-light,
+            body .bg-background-light,
+            body.bg-background-light {
+                background-color: #ffffff;
+            } 
+
+            
+            :root {
+                --c-background-light: #ffffff;
+            }
+           
+            
+            
+ 
+            html .c-lead,
+            html.c-lead,
+            body.c-lead,
+            body .c-lead {
+                color: #2c9e96;
+            }
+           
+            html .bg-lead,
+            html.bg-lead,
+            body .bg-lead,
+            body.bg-lead {
+                background-color: #2c9e96;
+            } 
+
+            
+            :root {
+                --c-lead: #2c9e96;
+            }
+           
+            
+            
+ 
+            html .c-alt,
+            html.c-alt,
+            body.c-alt,
+            body .c-alt {
+                color: #f26231;
+            }
+           
+            html .bg-alt,
+            html.bg-alt,
+            body .bg-alt,
+            body.bg-alt {
+                background-color: #f26231;
+            } 
+
+            
+            :root {
+                --c-alt: #f26231;
+            }
+           
+            
+            
+ 
+            html .c-text,
+            html.c-text,
+            body.c-text,
+            body .c-text {
+                color: #291a17;
+            }
+           
+            html .bg-text,
+            html.bg-text,
+            body .bg-text,
+            body.bg-text {
+                background-color: #291a17;
+            } 
+
+            
+            :root {
+                --c-text: #291a17;
+            }
+           
+            
+            
+ 
+            html .c-text-light,
+            html.c-text-light,
+            body.c-text-light,
+            body .c-text-light {
+                color: #291a17;
+            }
+           
+            html .bg-text-light,
+            html.bg-text-light,
+            body .bg-text-light,
+            body.bg-text-light {
+                background-color: #291a17;
+            } 
+
+            
+            :root {
+                --c-text-light: #291a17;
+            }
+           
+            
+            
+ 
+            html .c-gray-light,
+            html.c-gray-light,
+            body.c-gray-light,
+            body .c-gray-light {
+                color: #f9f7ed;
+            }
+           
+            html .bg-gray-light,
+            html.bg-gray-light,
+            body .bg-gray-light,
+            body.bg-gray-light {
+                background-color: #f9f7ed;
+            } 
+
+            
+            :root {
+                --c-gray-light: #f9f7ed;
+            }
+           
+            
+            
+ 
+            html .c-gray,
+            html.c-gray,
+            body.c-gray,
+            body .c-gray {
+                color: #ededed;
+            }
+           
+            html .bg-gray,
+            html.bg-gray,
+            body .bg-gray,
+            body.bg-gray {
+                background-color: #ededed;
+            } 
+
+            
+            :root {
+                --c-gray: #ededed;
+            }
+           
+            
+            
+ 
+            html .c-gray-dark,
+            html.c-gray-dark,
+            body.c-gray-dark,
+            body .c-gray-dark {
+                color: #d1d1d1;
+            }
+           
+            html .bg-gray-dark,
+            html.bg-gray-dark,
+            body .bg-gray-dark,
+            body.bg-gray-dark {
+                background-color: #d1d1d1;
+            } 
+
+            
+            :root {
+                --c-gray-dark: #d1d1d1;
+            }
+           
+            
+            
+
+         /** end general color plate **/
+         
+         /**select 2**/
+         body .select2-container[dir="rtl"] .select2-selection--single .select2-selection__rendered,
+         body .select2-container[dir="ltr"] .select2-selection--single .select2-selection__rendered {
+             color: #291a17;
+         }
+        
+         body .select2-container.select2-container--default .select2-results__option.select2-results__option--highlighted {
+             background: #2c9e96; color: #ffffff;
+         }
+         /**end select 2**/
+        
+         /**form widget toggle (oot)**/ 
+         body .on-off-toggle label::before, .oot label::before {
+             background: #d1d1d1;
+         }
+        
+         body .on-off-toggle input:checked ~ label::before, .oot input:checked ~ label::before {
+             background: #2c9e96;
+         }
+        
+         body .on-off-toggle input:checked ~ label::after, .oot input:checked ~ label::after {
+             background: #ffffff;
+         }
+         /**end form widget toggle (oot)**/ 
+         
+         /** form chekcbox **/ 
+         body .field-wrapper--checkbox .label::before,
+         .fw--checkbox .label::before {
+             border-color: #291a17;
+         }
+        
+         body .field-wrapper--checkbox .label::after, .fw--checkbox .label::after {
+             color: #f26231;
+         }
+         /** end form chekcbox **/ 
+          
+         /**active thumbs in event**/
+         body .event-display-wrapper .thumb-block.active .thumb-image {
+             box-shadow:  0 0 2px 2px #2c9e96 inset;
+         }
+         
+         /** nice scroll bar */
+         body .nice-scroll-bar::-webkit-scrollbar {
+             width: 6px; /*3px */
+         }
+            
+         body .nice-scroll-bar::-webkit-scrollbar-track {
+             -webkit-box-shadow: inset 0 0 6px  #f26231; /*6px */
+         }
+            
+         body .nice-scroll-bar::-webkit-scrollbar-thumb {
+             background-color: #2c9e96;
+             outline: 1px solid  #f26231; /*1px */
+         }
+            
+         body .nice-scroll-bar {
+             scrollbar-color: #2c9e96 #f26231;
+             scrollbar-width: medium; /*thin */
+         }
+         /** end nice scroll bar */
+               
+         /** timeline ::after, this gives background to the year list below the timeline scrollbar, including IE11 fix **/
+         body .timeline::after, .timeline.scrollable.default-skin::after,
+         body .viewport::after {
+            background: #d6d1c7;
+         }
+        
+         /** timeline year images ::after triangle **/
+         body .timeline .year-images::after,
+         body .timeline.scrollable.default-skin .year-images::after {
+            border-top-color: #ffffff;
+         }
+       
+         /** timeline year info ::after triangle **/
+         body .timeline .year-info::after, body .timeline.scrollable.default-skin .year-info::after {
+            border-bottom-color: #ffffff;
+         }
+      
+         /** timeline scrollbar **/
+      
+         body .timeline .scroll-bar,
+         body .timeline.scrollable.default-skin .scroll-bar,
+         body .timeline .scroll-bar.horizontal,
+         body .timeline.scrollable.default-skin .scroll-bar.horizontal {
+            background: repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 9px, rgba(0, 0, 0, 0.15) 11px, rgba(0, 0, 0, 0.15) 20px), #2c9e96;
+         }
+       
+         /** timeline scrollbar - thumb **/
+         body .timeline .scroll-bar .thumb,
+         body .timeline.scrollable.default-skin .scroll-bar .thumb,
+         body .timeline .scroll-bar.horizontal .thumb,
+         body .timeline.scrollable.default-skin .scroll-bar.horizontal .thumb {
+             background: repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 9px, rgba(0, 0, 0, 0.15) 11px, rgba(0, 0, 0, 0.15) 20px), #f26231;
+         }
+      
+         /** timeline scrollbar - thumb **/
+         body .timeline .scroll-bar .thumb::before,
+         body .timeline.scrollable.default-skin .scroll-bar .thumb::before, 
+         body .timeline .scroll-bar.horizontal .thumb::before, 
+         body .timeline.scrollable.default-skin .scroll-bar.horizontal .thumb::before {
+             border-right-color: #ffffff;
+         }
+        
+         /** timeline scrollbar - thumb **/
+         body .timeline .scroll-bar .thumb::after,
+         body .timeline.scrollable.default-skin .scroll-bar .thumb::after,
+         body .timeline .scroll-bar.horizontal .thumb::after,
+         body .timeline.scrollable.default-skin .scroll-bar.horizontal .thumb::after{
+            border-left-color: #ffffff;
+         }
+
+         /** add content - dynamic gradiant **/
+         body .add-content-button--main {
+             background: repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 9px, rgba(0, 0, 0, 0.15) 11px, rgba(0, 0, 0, 0.15) 20px), #2c9e96;
+         }
+
+         /** add content button - pseudo elements **/
+        body .add-content-button--main .icon-plus::before,
+        body .add-content-button--main .icon-plus::after{
+            background:  #ffffff;
+        }
+       
+        /** style for legacy menu item (we can not change the HTML) **/
+        body .footer-menu-1 .nav .footer_local_story {
+            color:  #ffffff;
+        }
+       
+        /** text for thumbnails **/
+        body .timeline .thumb-text, 
+        body .timeline.scrollable.default-skin .thumb-text {
+             background-color: #d6d1c7;
+             color: #291a17;
+        }
+       
+        /** background for events display (body doesnt usually have background color class) **/
+        body.events {
+            background-color: #d6d1c7;
+        }
+ 
+         /** event link hightlight in events view **/
+        body .event-link-text-short.highlight {
+            background: #2c9e96; 
+        }
+         
+        /** index link floating button **/
+         html[dir=rtl] body .index-link-wrapper::after {
+             border-top-color: #d6d1c7;
+         }
+         
+         html[dir=ltr] body .index-link-wrapper::after {
+             border-right-color: #d6d1c7;
+         }
+         
+        /* end weFramework style declaration*/ 
+        
+
+
+        
+    
