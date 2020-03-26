@@ -1554,6 +1554,7 @@
 
     <script src='./js/domBehaviours.js'></script>
     <script src="./js/timeLineController.js"></script>
+    <script src="./js/sortingApiData.js"></script>
     <script src='./js/dataRender.js'></script>
     </body>
 
