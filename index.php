@@ -12,7 +12,10 @@
     <link href="./index_files/select2.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="./css/displayConfig.css">
     <link rel="stylesheet" href="./css/template.css">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
     <script src="https://kit.fontawesome.com/785b9f2688.js" crossorigin="anonymous"></script>
     <script src="./index_files/we.framework.js" type="text/javascript"></script>
     <script src="./index_files/jquery.custom-scrollbar.js" type="text/javascript"></script>
@@ -20,13 +23,22 @@
    
     <link href="./index_files/css" rel="stylesheet" type="text/css">
     <link href="./index_files/css(1)" rel="stylesheet">
-    <link rel="stylesheet" href="./index_files/all.css"
-        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index_files/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/popup.css" >
     <link rel="stylesheet" href="./index_files/template.css" type="text/css">
 </head>
 
 <body dir="rtl" class="events assistant" id="body">
-   
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content" id="popup-content">
+     
+    </div>
+  </div>
+</div>
+
+
     <div class="main-timeline c-background main-timeline--standard c-text" data-role="timeline-view"
         style="opacity: 1;">
         <div class="main-background shaded" style="background-image: url(https://img5.goodfon.ru/original/1366x768/2/bc/gorod-noch-most-1.jpg);">
@@ -1550,11 +1562,10 @@
             </div>
         </div>
 </div>
-
-
+    <script src="./js/gallery.js"></script>
+    <script src="./js/jssor.slider-28.0.0.min.js"></script>
     <script src='./js/domBehaviours.js'></script>
     <script src="./js/timeLineController.js"></script>
-    <script src="./js/sortingApiData.js"></script>
     <script src='./js/dataRender.js'></script>
     </body>
 

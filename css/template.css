@@ -283,7 +283,7 @@
          body .timeline.scrollable.default-skin .scroll-bar,
          body .timeline .scroll-bar.horizontal,
          body .timeline.scrollable.default-skin .scroll-bar.horizontal {
-            background: repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 9px, rgba(0, 0, 0, 0.15) 11px, rgba(0, 0, 0, 0.15) 20px), #2c9e96;
+            background: #e3882a;
          }
        
          /** timeline scrollbar - thumb **/
@@ -291,7 +291,7 @@
          body .timeline.scrollable.default-skin .scroll-bar .thumb,
          body .timeline .scroll-bar.horizontal .thumb,
          body .timeline.scrollable.default-skin .scroll-bar.horizontal .thumb {
-             background: repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 9px, rgba(0, 0, 0, 0.15) 11px, rgba(0, 0, 0, 0.15) 20px), #f26231;
+             background: #32a0aa;
          }
       
          /** timeline scrollbar - thumb **/

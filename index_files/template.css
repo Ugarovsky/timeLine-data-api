@@ -2766,9 +2766,9 @@ html[dir=ltr] .we-message-window.event-share-modal .share-wrapper > * {
   cursor: pointer;
   opacity: 1;
   height: 36px;
-  border: 6px solid rgba(255, 255, 255, 0.95);
+  border: 3px solid rgba(255, 255, 255, 0.95);
   top: -5px;
-  border-radius: 5px;
+  border-radius: 3px;
   background: repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 9px, rgba(0, 0, 0, 0.15) 11px, rgba(0, 0, 0, 0.15) 20px), #F26231;
   z-index: 21;
   box-shadow: 3px 0 5px 2px inset rgba(0, 0, 0, 0.5), 0 0 4px 1px rgba(0, 0, 0, 0.9);
@@ -5552,5 +5552,9 @@ html[dir=ltr] .add-content-button--main {
 }
 .we-message-window[iframe-type="event"] .we-message__inner .we-message__close {
   display: none;
+}
+
+.timeline-year:hover{ 
+  cursor: pointer;
 }
 /*# sourceMappingURL=template.css.map */
