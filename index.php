@@ -31,8 +31,8 @@
 <body dir="rtl" class="events assistant" id="body">
 
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content" id="popup-content">
+  <div class="modal-dialog modal-lg" style="width: auto; min-width: 0; max-width: 960px !important;">
+    <div class="modal-content" id="popup-content" style="position:relative">
      
     </div>
   </div>
