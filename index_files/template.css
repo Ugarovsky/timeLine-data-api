@@ -2983,15 +2983,7 @@ html[dir=ltr] .we-message-window.event-share-modal .share-wrapper > * {
 
         */
 }
-@media screen and (max-width: 800px) {
-  .timeline .images-list,
-  .timeline.scrollable.default-skin .images-list {
-    left: 0;
-    padding-left: 0;
-    overflow: hidden;
-    justify-content: center;
-  }
-}
+
 .timeline .textual-preview,
 .timeline.scrollable.default-skin .textual-preview {
   direction: rtl;
@@ -3050,17 +3042,7 @@ html[dir=ltr] .we-message-window.event-share-modal .share-wrapper > * {
   }
 }
 @media screen and (max-width: 800px) {
-  .timeline .thumb-block,
-  .timeline.scrollable.default-skin .thumb-block {
-    display: none;
-  }
-  .timeline .thumb-block:first-of-type,
-  .timeline.scrollable.default-skin .thumb-block:first-of-type {
-    display: block;
-    height: 76px;
-    flex: 0 0 120px;
-    margin: auto 12px auto auto;
-  }
+
 }
 .timeline .thumb-text,
 .timeline.scrollable.default-skin .thumb-text {

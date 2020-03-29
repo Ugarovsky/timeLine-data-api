@@ -142,56 +142,33 @@ const getPopUp = (value) => {
     dataCount = 0; 
     const imageListTemplate = imageList(value);
     template.innerHTML = `
-    <div id="jssor_1" style="position:relative;margin:0px auto;top:0px;left:0px;width:960px;height:480px;overflow:hidden;visibility:hidden;background-color:#24262e;">
-    <!-- Loading Screen -->
-    <div data-u="slides" style="cursor:default;position:relative;top:0px;left:240px;width:720px;height:480px;overflow:hidden;">
+    <!-- Container for the image gallery -->
+    <div class="conainer" style="width:90%;margin:auto;padding:20px;">
+    
+      <!-- Full-width images with number text -->
+    
+    ${imageListTemplate[0]}
 
-    ${imageListTemplate}
 
-    </div><a data-scale="0" href="https://www.jssor.com" style="display:none;position:absolute;">web animation composer</a>
-    <!-- Thumbnail Navigator -->
-    <div data-u="thumbnavigator" class="jssort101" style="position:absolute;left:0px;top:0px;width:240px;height:480px;background-color:white;" data-autocenter="2" data-scale-left="0.75">
-        <div data-u="slides">
-            <div data-u="prototype" class="p" style="width:99px;height:66px;">
-                <div data-u="thumbnailtemplate" class="t"></div>
-                <svg viewbox="0 0 16000 16000" class="cv">
-                    <circle class="a" cx="8000" cy="8000" r="3238.1"></circle>
-                    <line class="a" x1="6190.5" y1="8000" x2="9809.5" y2="8000"></line>
-                    <line class="a" x1="8000" y1="9809.5" x2="8000" y2="6190.5"></line>
-                </svg>
-            </div>
-        </div>
-    </div>
-    <!-- Arrow Navigator -->
-    <div data-u="arrowleft" class="jssora093" style="width:50px;height:50px;top:0px;left:270px;" onclick="getPrevData()" data-autocenter="2">
-        <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-            <circle class="c" cx="8000" cy="8000" r="5920"></circle>
-            <polyline class="a" points="7777.8,6080 5857.8,8000 7777.8,9920 "></polyline>
-            <line class="a" x1="10142.2" y1="8000" x2="5857.8" y2="8000"></line>
-        </svg>
-    </div>
-    <div data-u="arrowright" class="jssora093" style="width:50px;height:50px;top:0px;right:10px;" onclick="getNextData()" data-autocenter="2">
-        <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-            <circle class="c" cx="8000" cy="8000" r="5920"></circle>
-            <polyline class="a" points="8222.2,6080 10142.2,8000 8222.2,9920 "></polyline>
-            <line class="a" x1="5857.8" y1="8000" x2="10142.2" y2="8000"></line>
-        </svg>
-    </div>
-</div>
-<div id="title">
-    <h1>${pickedAlbum.name}</h1>
-    <h1>${pickedAlbum.year}</h1>
-    <h1>${pickedAlbum.media[0].title}</h1>
-</div>
-<div id="menu-bar">
-<div id="to-video" onclick="getVideos(${value})"><h1>To Video</h1></div>
-<doc id="to-close" type="button" data-dismiss="modal" aria-label="Close"><h1>Close</h1></div>
-</div>`
-jssor_1_slider_init();
+    
+    
+      <!-- Image text -->
+      <div class="caption-container" id="title">
+      <h1 >${pickedAlbum.year}</h1>
+      <h1 >${pickedAlbum.name}</h1>
+      </div>
+      <div class="row" style="padding:0 20px">
+
+      ${imageListTemplate[1]}
+
+      </div>
+    </div>`
+
+    showSlides(slideIndex);
 }
 
 const imageList = (value) => {
-    list = ``; 
+    list = [``,``]; 
     
     sortAlbumData.map(sortItem => {
         sortItem.items.forEach(element => {
@@ -205,80 +182,69 @@ const imageList = (value) => {
         })
     })
 
-    pickedAlbum.media.forEach(item => {
-        list += `<div>
-        <img data-u="image" src="${item.image}" />
-        <br>
-        <h1>asdasdasd</h1>
-        <img data-u="thumb" src="${item.image}" />
-        </div>`
+    pickedAlbum.media.forEach((item,i) => {
+        
+    if(item.video){
+        const videoLink = item.video.replace('https://www.youtube.com/watch?v=', 'https://www.youtube.com/embed/');
+            list[0] += `<div class="mySlides">
+            <iframe width="100%" height="${window.innerHeight / 2.5}" src="${videoLink}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h1 style="text-align:right; font-size: 3vw;
+            font-weight: 900;
+            text-align: right;">${item.title ? item.title : ''}</h1>
+          </div>
+        `
+            list[1] += `<div class="column">
+            <img class="demo cursor" src="${item.image}" style="width:100%" onclick="currentSlide(${i + 1})">
+            </div>
+        `
+        }
+        else { 
+        list[0] += `<div class="mySlides">
+          <img src="${item.image}" style="width:100%">
+          <h1 style="text-align:right; font-size: 3vw;
+            font-weight: 900;
+            text-align: right;">${item.title ? item.title : ''}</h1>
+      </div>
+    `
+        list[1] += `<div class="column">
+        <img class="demo cursor" src="${item.image}" style="width:100%" onclick="currentSlide(${i + 1})">
+     
+      </div>
+    `
+        }
     })
+    
 
     return list;
 }
 
-function getPrevData () { 
-    const title = document.getElementById('title');
-    let data = dataCount;
+var slideIndex = 0;
 
-    if(dataCount - 1 >= 0){
-        data = dataCount - 1;
-        --dataCount
-    }
 
-    else { 
-        data = pickedAlbum.media.length -1;
-        dataCount = data;
-    }
- 
-    title.innerHTML = `
-    <h1>${pickedAlbum.name}</h1>
-    <h1>${pickedAlbum.year}</h1>
-    <h1>${pickedAlbum.media[data].title}</h1>`
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
-function getNextData() { 
-    
-    const title = document.getElementById('title');
-    let data = dataCount
-
-    if(dataCount + 1 < pickedAlbum.media.length){
-        data = dataCount + 1;
-        ++dataCount
-    }
-
-    else { 
-        data = 0;
-        dataCount = 0;
-    }
- 
-    title.innerHTML = `
-    <h1>${pickedAlbum.name}</h1>
-    <h1>${pickedAlbum.year}</h1>
-    <h1>${pickedAlbum.media[data].title}</h1>`
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
 }
 
-const getVideos = (value) => {
-    let videoList = ``;
-    pickedAlbum.media.forEach(item => { 
-        if(item.video) { 
-            const videoLink = item.video.replace('https://www.youtube.com/watch?v=', 'https://www.youtube.com/embed/');
-
-            videoList += `<iframe width="100%" height="${window.innerHeight / 2.5}" src="${videoLink}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <div id="title">
-            <h1>${pickedAlbum.name}</h1>
-            <h1>${pickedAlbum.year}</h1>
-            <h1>${item.title}</h1></div>
-            <div id="menu-bar">
-            <div id="to-video" onclick="getPopUp(${value})"><h1>To Images</h1></div>
-            <doc id="to-close" type="button" data-dismiss="modal" aria-label="Close"><h1>Close</h1></div>
-        </div>`
-        }
-    })
-
-    template.innerHTML = `${videoList}` ? `${videoList}` : `<div id="title"><h1>No video in this album</h1></div>
-    <div id="menu-bar">
-            <div id="to-video" onclick="getPopUp(${value})"><h1>To Images</h1></div>
-            <doc id="to-close" type="button" data-dismiss="modal" aria-label="Close"><h1>Close</h1></div>
-        </div>` ;
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
 }
