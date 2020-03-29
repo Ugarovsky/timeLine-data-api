@@ -62,7 +62,36 @@
                 --c-lead: #2c9e96;
             }
            
-            
+            #menu-bar { 
+                font-size: 20px;
+                font-weight: 900;
+                width: 100%;
+                min-height: 2vh;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            #to-video { 
+                flex: 1;
+                padding: 10px;
+                font-size: 2vw;
+                text-align: center;
+                background: #2c9e96;
+            }
+
+            #to-video:hover ,  #to-close:hover { 
+                cursor: pointer;
+            }
+
+            #to-close { 
+                flex: 1;
+                padding: 10px;
+                font-size: 2vw;
+                text-align: center;
+                background: #f26231;
+            }
+
+
             
  
             html .c-alt,
@@ -360,3 +389,5 @@
     .year-info-event-link { 
         text-align: right;
     }
+
+   

@@ -3722,6 +3722,7 @@ body.events {
 .main-timeline .main-background.shaded::after {
   content: ' ';
   position: absolute;
+  border-bottom: 15px solid #e3882a;
   top: 0;
   right: 0;
   width: 100%;

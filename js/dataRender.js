@@ -1,65 +1,50 @@
-const overview = document.getElementById('overview');
-const data = Object.values(apiData).map((item,i) => {
-    return {
-        name: Object.keys(apiData)[i],
-        albumDate: item.albumDate,
-        albumYear: item.albumDate.slice(0, 4),
-        items: Object.values(item.items).map(elem => {
-            return {
-                title: elem.title,
-                image: elem.image
-            }
-        })
-    }
+sortAlbumData.forEach(element => {
+    let titles = ``
+    let images = ``
+
+    element.items.map(item => {
+        titles += `  
+        <span class="year-info-event-link" data-toggle="modal" data-target=".bd-example-modal-lg" onclick="getPopUp('${item.data}')">
+        <span class="event-link-text">
+        <span class="event-link-text-short" data-role="event-link-short"
+         data-event-id="291">${item.name}</span>
+        </span>
+        </span>`
+
+        console.log(item.data);
+
+        images += ` <div class="thumb-block thumb-block--image has-title" data-role="thumb"
+        data-behaviour="modal-iframe-trigger">
+        <div class="thumb-image lazy-loading" data-toggle="modal" data-target=".bd-example-modal-lg" onclick="getPopUp('${item.data}')"
+        data-lazy-background-image="${item.media[0].image}">
+        </div>
+        <div class="thumb-text c-text"></div>
+        </div>`
+    })
+
+    overview.innerHTML += `<div class="timeline-year" style="display: block;" data-role="timeline-year">
+    <div class="year-inner">
+        <div class="year-images bg-background-light">
+            <div type="button" class="year-images-inner">
+                <div class="images-list  nice-scroll-bar">
+                   ${images}
+                </div>
+            </div>
+        </div>
+        <div class="year-info bg-background-light" data-role="year-event-list"
+            data-year-id="209">
+            <div class="year-title c-alt" data-event="requestSearchYear" data-event-data="209">
+                ${element.year} </div>
+            <div class="year-event-list nice-scroll-bar">
+              ${titles}
+            </div>
+           
+        </div>
+    </div>
+</div>`
 })
 
-const albumArray = () => {
-    let albumArray = []
 
-    data.forEach(element => {
-        isDouble = 0;
-
-        if (!albumArray.length) {
-            albumArray.push({
-                year: element.albumYear,
-                items: [],
-            })
-        }
-        else {
-            data.map(item => {
-                isDouble += item.albumYear == element.albumYear ? 1 : 0;
-            })
-
-            if (isDouble < 2) {
-                albumArray.push({
-                    year: element.albumYear,
-                    items: [],
-                })
-            }
-        }
-    })
-    return albumArray;
-}
-
-const concatAlbumData = () => {
-    const albumByYear = albumArray();
-
-    albumByYear.forEach(item => {
-        data.map(element => {
-            if (item.year == element.albumYear) {
-                item.items.push(
-                    {
-                        name: element.name,
-                        data: element.albumDate,
-                        media: element.items
-                    });
-            }
-        })
-    })
-    return albumByYear;
-}
-
-const sortAlbumData = concatAlbumData();
 
 sortAlbumData.forEach(element => {
     let titles = ``
@@ -101,18 +86,60 @@ sortAlbumData.forEach(element => {
             <div class="year-event-list nice-scroll-bar">
               ${titles}
             </div>
-            <div class="mobile-overlay" data-event="requestSearchYear" data-event-type="click"
-                data-event-data="209"></div>
+           
         </div>
     </div>
 </div>`
 })
 
-let pickedAlbum = null;
-let dataCount = 0;
+sortAlbumData.forEach(element => {
+    let titles = ``
+    let images = ``
 
-const getPopUp = (value) => { 
-    const template = document.getElementById('popup-content');
+    element.items.map(item => {
+        titles += `  
+        <span class="year-info-event-link" data-toggle="modal" data-target=".bd-example-modal-lg" onclick="getPopUp('${item.data}')">
+        <span class="event-link-text">
+        <span class="event-link-text-short" data-role="event-link-short"
+         data-event-id="291">${item.name}</span>
+        </span>
+        </span>`
+
+        console.log(item.data);
+
+        images += ` <div class="thumb-block thumb-block--image has-title" data-role="thumb"
+        data-behaviour="modal-iframe-trigger">
+        <div class="thumb-image lazy-loading" data-toggle="modal" data-target=".bd-example-modal-lg" onclick="getPopUp('${item.data}')"
+        data-lazy-background-image="${item.media[0].image}">
+        </div>
+        <div class="thumb-text c-text"></div>
+        </div>`
+    })
+
+    overview.innerHTML += `<div class="timeline-year" style="display: block;" data-role="timeline-year">
+    <div class="year-inner">
+        <div class="year-images bg-background-light">
+            <div type="button" class="year-images-inner">
+                <div class="images-list  nice-scroll-bar">
+                   ${images}
+                </div>
+            </div>
+        </div>
+        <div class="year-info bg-background-light" data-role="year-event-list"
+            data-year-id="209">
+            <div class="year-title c-alt" data-event="requestSearchYear" data-event-data="209">
+                ${element.year} </div>
+            <div class="year-event-list nice-scroll-bar">
+              ${titles}
+            </div>
+           
+        </div>
+    </div>
+</div>`
+})
+
+const getPopUp = (value) => {
+    dataCount = 0; 
     const imageListTemplate = imageList(value);
     template.innerHTML = `
     <div id="jssor_1" style="position:relative;margin:0px auto;top:0px;left:0px;width:960px;height:480px;overflow:hidden;visibility:hidden;background-color:#24262e;">
@@ -153,7 +180,12 @@ const getPopUp = (value) => {
 </div>
 <div id="title">
     <h1>${pickedAlbum.name}</h1>
+    <h1>${pickedAlbum.year}</h1>
     <h1>${pickedAlbum.media[0].title}</h1>
+</div>
+<div id="menu-bar">
+<div id="to-video" onclick="getVideos(${value})"><h1>To Video</h1></div>
+<doc id="to-close" type="button" data-dismiss="modal" aria-label="Close"><h1>Close</h1></div>
 </div>`
 jssor_1_slider_init();
 }
@@ -167,6 +199,7 @@ const imageList = (value) => {
                 pickedAlbum = { 
                     media : element.media,
                     name : element.name,
+                    year : element.data,
                 }
             }
         })
@@ -200,6 +233,7 @@ function getPrevData () {
  
     title.innerHTML = `
     <h1>${pickedAlbum.name}</h1>
+    <h1>${pickedAlbum.year}</h1>
     <h1>${pickedAlbum.media[data].title}</h1>`
 }
 
@@ -220,5 +254,31 @@ function getNextData() {
  
     title.innerHTML = `
     <h1>${pickedAlbum.name}</h1>
+    <h1>${pickedAlbum.year}</h1>
     <h1>${pickedAlbum.media[data].title}</h1>`
+}
+
+const getVideos = (value) => {
+    let videoList = ``;
+    pickedAlbum.media.forEach(item => { 
+        if(item.video) { 
+            const videoLink = item.video.replace('https://www.youtube.com/watch?v=', 'https://www.youtube.com/embed/');
+
+            videoList += `<iframe width="100%" height="${window.innerHeight / 2.5}" src="${videoLink}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div id="title">
+            <h1>${pickedAlbum.name}</h1>
+            <h1>${pickedAlbum.year}</h1>
+            <h1>${item.title}</h1></div>
+            <div id="menu-bar">
+            <div id="to-video" onclick="getPopUp(${value})"><h1>To Images</h1></div>
+            <doc id="to-close" type="button" data-dismiss="modal" aria-label="Close"><h1>Close</h1></div>
+        </div>`
+        }
+    })
+
+    template.innerHTML = `${videoList}` ? `${videoList}` : `<div id="title"><h1>No video in this album</h1></div>
+    <div id="menu-bar">
+            <div id="to-video" onclick="getPopUp(${value})"><h1>To Images</h1></div>
+            <doc id="to-close" type="button" data-dismiss="modal" aria-label="Close"><h1>Close</h1></div>
+        </div>` ;
 }

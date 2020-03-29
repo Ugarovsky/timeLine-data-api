@@ -1,17 +1,19 @@
 const overview = document.getElementById('overview');
-const data = Object.values(apiData).map(item => {
+const template = document.getElementById('popup-content');
+const data = Object.values(apiData).map((item,i) => {
     return {
+        name: Object.keys(apiData)[i],
         albumDate: item.albumDate,
         albumYear: item.albumDate.slice(0, 4),
         items: Object.values(item.items).map(elem => {
             return {
                 title: elem.title,
-                image: elem.image
+                image: elem.image,
+                video: elem.video
             }
         })
     }
 })
-
 
 const albumArray = () => {
     let albumArray = []
@@ -25,6 +27,7 @@ const albumArray = () => {
                 items: [],
             })
         }
+
         else {
             data.map(item => {
                 isDouble += item.albumYear == element.albumYear ? 1 : 0;
@@ -38,6 +41,7 @@ const albumArray = () => {
             }
         }
     })
+
     return albumArray;
 }
 
@@ -49,6 +53,7 @@ const concatAlbumData = () => {
             if (item.year == element.albumYear) {
                 item.items.push(
                     {
+                        name: element.name,
                         data: element.albumDate,
                         media: element.items
                     });
@@ -59,4 +64,3 @@ const concatAlbumData = () => {
 }
 
 const sortAlbumData = concatAlbumData();
-console.log(sortAlbumData);

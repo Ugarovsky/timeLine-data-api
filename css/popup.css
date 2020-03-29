@@ -51,3 +51,31 @@
     font-size: 2.2vw;
     font-weight: 800;
 }
+
+
+@media (max-width: 900px) {
+    #to-video { 
+        flex: 1;
+        padding: 10px;
+        font-size: 5vw;
+        text-align: center;
+        background: #55d0c8;
+    }
+
+    #to-video:hover ,  #to-close:hover { 
+        cursor: pointer;
+    }
+
+    #to-close { 
+        flex: 1;
+        padding: 10px;
+        font-size: 5vw;
+        text-align: center;
+        background: #ff9672;
+    }
+
+    #title h1 { 
+        font-size: 4vw;
+    }
+
+  }

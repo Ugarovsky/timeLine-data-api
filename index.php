@@ -41,7 +41,7 @@
 
     <div class="main-timeline c-background main-timeline--standard c-text" data-role="timeline-view"
         style="opacity: 1;">
-        <div class="main-background shaded" style="background-image: url(https://img5.goodfon.ru/original/1366x768/2/bc/gorod-noch-most-1.jpg);">
+        <div class="main-background shaded" style="background-image: url(https://look.com.ua/pic/201210/1920x1080/look.com.ua-52763.jpg);">
         </div>
         <div class="timeline-wrapper " data-role="timeline-outer">
             <div class="timeline default-skin  scrollable active" data-role="timeline-inner" tabindex="-1">
@@ -1566,6 +1566,7 @@
     <script src="./js/jssor.slider-28.0.0.min.js"></script>
     <script src='./js/domBehaviours.js'></script>
     <script src="./js/timeLineController.js"></script>
+    <script src="./js/sortingApiData.js"></script>
     <script src='./js/dataRender.js'></script>
     </body>
 
