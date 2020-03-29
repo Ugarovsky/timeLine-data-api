@@ -61,200 +61,13 @@ const concatAlbumData = () => {
 
 const sortAlbumData = concatAlbumData();
 
-//////////////////////////////////////////////////////////
-// sortAlbumData.forEach(element => {
-//     let titles = ``
-//     let images = ``
-
-//     element.items.map(item => {
-//         titles += `  
-//         <span class="year-info-event-link">
-//         <span class="event-link-text">
-//         <span class="event-link-text-short" data-role="event-link-short"
-//          data-event-id="291">${item.name}</span>
-//         </span>
-//         </span>`
-
-//         images += ` <div class="thumb-block thumb-block--image has-title" data-role="thumb"
-//         data-behaviour="modal-iframe-trigger">
-//         <div class="thumb-image lazy-loading"
-//         data-lazy-background-image="${item.media[0].image}">
-//         </div>
-//         <div class="thumb-text c-text"></div>
-//         </div>`
-//     })
-
-//     overview.innerHTML += `<div class="timeline-year" style="display: block;" data-role="timeline-year">
-//     <div class="year-inner">
-//         <div class="year-images bg-background-light" onclick="getPopUp(${element.year})">
-//             <div class="year-images-inner">
-//                 <div class="images-list  nice-scroll-bar ">
-//                    ${images}
-//                 </div>
-//             </div>
-//         </div>
-//         <div class="year-info bg-background-light" data-role="year-event-list"
-//             data-year-id="209">
-//             <div class="year-title c-alt" data-event="requestSearchYear" data-event-data="209">
-//                 ${element.year} </div>
-//             <div class="year-event-list nice-scroll-bar">
-//               ${titles}
-//             </div>
-//             <div class="mobile-overlay" data-event="requestSearchYear" data-event-type="click"
-//                 data-event-data="209"></div>
-//         </div>
-//     </div>
-// </div>`
-
-// })
-
-// sortAlbumData.forEach(element => {
-//     let titles = ``
-//     let images = ``
-
-//     element.items.map(item => {
-//         titles += `  
-//         <span class="year-info-event-link">
-//         <span class="event-link-text">
-//         <span class="event-link-text-short" data-role="event-link-short"
-//          data-event-id="291">${item.name}</span>
-//         </span>
-//         </span>`
-
-//         images += ` <div class="thumb-block thumb-block--image has-title" data-role="thumb"
-//         data-behaviour="modal-iframe-trigger">
-//         <div class="thumb-image lazy-loading"
-//         data-lazy-background-image="${item.media[0].image}">
-//         </div>
-//         <div class="thumb-text c-text"></div>
-//         </div>`
-//     })
-
-//     overview.innerHTML += `<div class="timeline-year" style="display: block;" data-role="timeline-year">
-//     <div class="year-inner">
-//         <div class="year-images bg-background-light" onclick="getPopUp(${element.year})">
-//             <div class="year-images-inner">
-//                 <div class="images-list  nice-scroll-bar ">
-//                    ${images}
-//                 </div>
-//             </div>
-//         </div>
-//         <div class="year-info bg-background-light" data-role="year-event-list"
-//             data-year-id="209">
-//             <div class="year-title c-alt" data-event="requestSearchYear" data-event-data="209">
-//                 ${element.year} </div>
-//             <div class="year-event-list nice-scroll-bar">
-//               ${titles}
-//             </div>
-//             <div class="mobile-overlay" data-event="requestSearchYear" data-event-type="click"
-//                 data-event-data="209"></div>
-//         </div>
-//     </div>
-// </div>`
-
-// })
-
 sortAlbumData.forEach(element => {
     let titles = ``
     let images = ``
 
     element.items.map(item => {
         titles += `  
-        <span class="year-info-event-link">
-        <span class="event-link-text">
-        <span class="event-link-text-short" data-role="event-link-short"
-         data-event-id="291">${item.name}</span>
-        </span>
-        </span>`
-
-        console.log(item.data);
-
-        images += ` <div class="thumb-block thumb-block--image has-title" data-role="thumb"
-        data-behaviour="modal-iframe-trigger">
-        <div class="thumb-image lazy-loading" data-toggle="modal" data-target=".bd-example-modal-lg" onclick="getPopUp('${item.data}')"
-        data-lazy-background-image="${item.media[0].image}">
-        </div>
-        <div class="thumb-text c-text"></div>
-        </div>`
-    })
-
-    overview.innerHTML += `<div class="timeline-year" style="display: block;" data-role="timeline-year">
-    <div class="year-inner">
-        <div class="year-images bg-background-light">
-            <div type="button" class="year-images-inner">
-                <div class="images-list  nice-scroll-bar">
-                   ${images}
-                </div>
-            </div>
-        </div>
-        <div class="year-info bg-background-light" data-role="year-event-list"
-            data-year-id="209">
-            <div class="year-title c-alt" data-event="requestSearchYear" data-event-data="209">
-                ${element.year} </div>
-            <div class="year-event-list nice-scroll-bar">
-              ${titles}
-            </div>
-            <div class="mobile-overlay" data-event="requestSearchYear" data-event-type="click"
-                data-event-data="209"></div>
-        </div>
-    </div>
-</div>`
-})
-
-sortAlbumData.forEach(element => {
-    let titles = ``
-    let images = ``
-
-    element.items.map(item => {
-        titles += `  
-        <span class="year-info-event-link">
-        <span class="event-link-text">
-        <span class="event-link-text-short" data-role="event-link-short"
-         data-event-id="291">${item.name}</span>
-        </span>
-        </span>`
-
-        console.log(item.data);
-
-        images += ` <div class="thumb-block thumb-block--image has-title" data-role="thumb"
-        data-behaviour="modal-iframe-trigger">
-        <div class="thumb-image lazy-loading" data-toggle="modal" data-target=".bd-example-modal-lg" onclick="getPopUp('${item.data}')"
-        data-lazy-background-image="${item.media[0].image}">
-        </div>
-        <div class="thumb-text c-text"></div>
-        </div>`
-    })
-
-    overview.innerHTML += `<div class="timeline-year" style="display: block;" data-role="timeline-year">
-    <div class="year-inner">
-        <div class="year-images bg-background-light">
-            <div type="button" class="year-images-inner">
-                <div class="images-list  nice-scroll-bar">
-                   ${images}
-                </div>
-            </div>
-        </div>
-        <div class="year-info bg-background-light" data-role="year-event-list"
-            data-year-id="209">
-            <div class="year-title c-alt" data-event="requestSearchYear" data-event-data="209">
-                ${element.year} </div>
-            <div class="year-event-list nice-scroll-bar">
-              ${titles}
-            </div>
-            <div class="mobile-overlay" data-event="requestSearchYear" data-event-type="click"
-                data-event-data="209"></div>
-        </div>
-    </div>
-</div>`
-})
-
-sortAlbumData.forEach(element => {
-    let titles = ``
-    let images = ``
-
-    element.items.map(item => {
-        titles += `  
-        <span class="year-info-event-link">
+        <span class="year-info-event-link" data-toggle="modal" data-target=".bd-example-modal-lg" onclick="getPopUp('${item.data}')">
         <span class="event-link-text">
         <span class="event-link-text-short" data-role="event-link-short"
          data-event-id="291">${item.name}</span>
@@ -310,7 +123,7 @@ const getPopUp = (value) => {
 
     </div><a data-scale="0" href="https://www.jssor.com" style="display:none;position:absolute;">web animation composer</a>
     <!-- Thumbnail Navigator -->
-    <div data-u="thumbnavigator" class="jssort101" style="position:absolute;left:0px;top:0px;width:240px;height:480px;background-color:#32a0aa;" data-autocenter="2" data-scale-left="0.75">
+    <div data-u="thumbnavigator" class="jssort101" style="position:absolute;left:0px;top:0px;width:240px;height:480px;background-color:white;" data-autocenter="2" data-scale-left="0.75">
         <div data-u="slides">
             <div data-u="prototype" class="p" style="width:99px;height:66px;">
                 <div data-u="thumbnailtemplate" class="t"></div>
@@ -339,7 +152,8 @@ const getPopUp = (value) => {
     </div>
 </div>
 <div id="title">
-    <h1>${pickedAlbum[0].title}</h1>
+    <h1>${pickedAlbum.name}</h1>
+    <h1>${pickedAlbum.media[0].title}</h1>
 </div>`
 jssor_1_slider_init();
 }
@@ -349,11 +163,16 @@ const imageList = (value) => {
     
     sortAlbumData.map(sortItem => {
         sortItem.items.forEach(element => {
-            pickedAlbum = value == element.data ? element.media : pickedAlbum;
+            if(value == element.data) { 
+                pickedAlbum = { 
+                    media : element.media,
+                    name : element.name,
+                }
+            }
         })
     })
 
-    pickedAlbum.forEach(item => {
+    pickedAlbum.media.forEach(item => {
         list += `<div>
         <img data-u="image" src="${item.image}" />
         <br>
@@ -366,23 +185,40 @@ const imageList = (value) => {
 }
 
 function getPrevData () { 
+    const title = document.getElementById('title');
+    let data = dataCount;
 
+    if(dataCount - 1 >= 0){
+        data = dataCount - 1;
+        --dataCount
+    }
+
+    else { 
+        data = pickedAlbum.media.length -1;
+        dataCount = data;
+    }
+ 
+    title.innerHTML = `
+    <h1>${pickedAlbum.name}</h1>
+    <h1>${pickedAlbum.media[data].title}</h1>`
 }
 
 function getNextData() { 
     
     const title = document.getElementById('title');
-    let data = 0
+    let data = dataCount
 
-    if(dataCount + 1 < pickedAlbum.length){
+    if(dataCount + 1 < pickedAlbum.media.length){
         data = dataCount + 1;
         ++dataCount
     }
-    
+
     else { 
         data = 0;
         dataCount = 0;
     }
  
-    title.innerHTML += `<h1>${pickedAlbum[data].title}`
+    title.innerHTML = `
+    <h1>${pickedAlbum.name}</h1>
+    <h1>${pickedAlbum.media[data].title}</h1>`
 }

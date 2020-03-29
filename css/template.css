@@ -76,7 +76,7 @@
             html.bg-alt,
             body .bg-alt,
             body.bg-alt {
-                background-color: #f26231;
+                background-color: #2c9e96;
             } 
 
             
@@ -357,4 +357,6 @@
 
 
         
-    
+    .year-info-event-link { 
+        text-align: right;
+    }
