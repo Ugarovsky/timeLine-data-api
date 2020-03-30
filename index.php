@@ -3,13 +3,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="he-il" lang="he-il" dir="rtl">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <script type="text/javascript" src="./index_files/jquery.min.js"></script>
+    <script type="text/javascript" src="./timeline/jquery.min.js"></script>
     <script src="./js/windowPromise.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./index_files/jquery.custom-scrollbar.css" rel="stylesheet" type="text/css">
-    <link href="./index_files/we.css" rel="stylesheet" type="text/css">
-    <link href="./index_files/jquery.datepick.css" rel="stylesheet" type="text/css">
-    <link href="./index_files/select2.min.css" rel="stylesheet" type="text/css">
+    <link href="./timeline/jquery.custom-scrollbar.css" rel="stylesheet" type="text/css">
+    <link href="./timeline/we.css" rel="stylesheet" type="text/css">
+    <link href="./timeline/jquery.datepick.css" rel="stylesheet" type="text/css">
+    <link href="./timeline/select2.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="./css/displayConfig.css">
     <link rel="stylesheet" href="./css/template.css">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
@@ -18,15 +18,15 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   
     <script src="https://kit.fontawesome.com/785b9f2688.js" crossorigin="anonymous"></script>
-    <script src="./index_files/we.framework.js" type="text/javascript"></script>
-    <script src="./index_files/jquery.custom-scrollbar.js" type="text/javascript"></script>
-    <script src="./index_files/timeline.js" type="text/javascript"></script>
+    <script src="./timeline/we.framework.js" type="text/javascript"></script>
+    <script src="./timeline/jquery.custom-scrollbar.js" type="text/javascript"></script>
+    <script src="./timeline/timeline.js" type="text/javascript"></script>
    
-    <link href="./index_files/css" rel="stylesheet" type="text/css">
-    <link href="./index_files/css(1)" rel="stylesheet">
-    <link rel="stylesheet" href="./index_files/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="./timeline/css" rel="stylesheet" type="text/css">
+    <link href="./timeline/css(1)" rel="stylesheet">
+    <link rel="stylesheet" href="./timeline/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/popup.css" >
-    <link rel="stylesheet" href="./index_files/template.css" type="text/css">
+    <link rel="stylesheet" href="./timeline/template.css" type="text/css">
 </head>
 
 <body dir="rtl" class="events assistant" id="body">
@@ -127,7 +127,7 @@
 
                     <div class="acsb-make-center acsb-make-center-relative">
                         <span class="acsb-language-flag">
-                            <img src="./index_files/he.svg" alt="עברית"> </span>
+                            <img src="./timeline/he.svg" alt="עברית"> </span>
                         <span class="acsb-text-link">עברית</span>
                         <i class="acsb-box-icon acsbi-chevron_down"></i>
                     </div>
@@ -1266,7 +1266,7 @@
 
                                 <div class="acsb-make-center">
 
-                                    <img src="./index_files/en.svg" alt="English"> <span
+                                    <img src="./timeline/en.svg" alt="English"> <span
                                         class="acsb-align-middle">English</span>
 
                                 </div>
@@ -1281,7 +1281,7 @@
 
                                 <div class="acsb-make-center">
 
-                                    <img src="./index_files/es.svg" alt="Español"> <span
+                                    <img src="./timeline/es.svg" alt="Español"> <span
                                         class="acsb-align-middle">Español</span>
 
                                 </div>
@@ -1296,7 +1296,7 @@
 
                                 <div class="acsb-make-center">
 
-                                    <img src="./index_files/de.svg" alt="Deutsch"> <span
+                                    <img src="./timeline/de.svg" alt="Deutsch"> <span
                                         class="acsb-align-middle">Deutsch</span>
 
                                 </div>
@@ -1311,7 +1311,7 @@
 
                                 <div class="acsb-make-center">
 
-                                    <img src="./index_files/pt.svg" alt="Português"> <span
+                                    <img src="./timeline/pt.svg" alt="Português"> <span
                                         class="acsb-align-middle">Português</span>
 
                                 </div>
@@ -1326,7 +1326,7 @@
 
                                 <div class="acsb-make-center">
 
-                                    <img src="./index_files/fr.svg" alt="Français"> <span
+                                    <img src="./timeline/fr.svg" alt="Français"> <span
                                         class="acsb-align-middle">Français</span>
 
                                 </div>
@@ -1341,7 +1341,7 @@
 
                                 <div class="acsb-make-center">
 
-                                    <img src="./index_files/it.svg" alt="Italiano"> <span
+                                    <img src="./timeline/it.svg" alt="Italiano"> <span
                                         class="acsb-align-middle">Italiano</span>
 
                                 </div>
@@ -1356,7 +1356,7 @@
 
                                 <div class="acsb-make-center">
 
-                                    <img src="./index_files/he.svg" alt="עברית"> <span
+                                    <img src="./timeline/he.svg" alt="עברית"> <span
                                         class="acsb-align-middle">עברית</span>
 
                                 </div>
@@ -1371,7 +1371,7 @@
 
                                 <div class="acsb-make-center">
 
-                                    <img src="./index_files/tw.svg" alt="繁體中文"> <span
+                                    <img src="./timeline/tw.svg" alt="繁體中文"> <span
                                         class="acsb-align-middle">繁體中文</span>
 
                                 </div>
@@ -1386,7 +1386,7 @@
 
                                 <div class="acsb-make-center">
 
-                                    <img src="./index_files/ru.svg" alt="Pусский"> <span
+                                    <img src="./timeline/ru.svg" alt="Pусский"> <span
                                         class="acsb-align-middle">Pусский</span>
 
                                 </div>
@@ -1401,7 +1401,7 @@
 
                                 <div class="acsb-make-center">
 
-                                    <img src="./index_files/ar.svg" alt="عربى"> <span
+                                    <img src="./timeline/ar.svg" alt="عربى"> <span
                                         class="acsb-align-middle">عربى</span>
 
                                 </div>
@@ -1416,7 +1416,7 @@
 
                                 <div class="acsb-make-center">
 
-                                    <img src="./index_files/ua.svg" alt="عربى"> <span
+                                    <img src="./timeline/ua.svg" alt="عربى"> <span
                                         class="acsb-align-middle">عربى</span>
 
                                 </div>
@@ -1431,7 +1431,7 @@
 
                                 <div class="acsb-make-center">
 
-                                    <img src="./index_files/nl.svg" alt="Nederlands"> <span
+                                    <img src="./timeline/nl.svg" alt="Nederlands"> <span
                                         class="acsb-align-middle">Nederlands</span>
 
                                 </div>
@@ -1446,7 +1446,7 @@
 
                                 <div class="acsb-make-center">
 
-                                    <img src="./index_files/ct.svg" alt="繁體中文"> <span
+                                    <img src="./timeline/ct.svg" alt="繁體中文"> <span
                                         class="acsb-align-middle">繁體中文</span>
 
                                 </div>
@@ -1461,7 +1461,7 @@
 
                                 <div class="acsb-make-center">
 
-                                    <img src="./index_files/jp.svg" alt="日本語"> <span
+                                    <img src="./timeline/jp.svg" alt="日本語"> <span
                                         class="acsb-align-middle">日本語</span>
 
                                 </div>

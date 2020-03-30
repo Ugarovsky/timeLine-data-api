@@ -412,6 +412,7 @@
       /* Next & previous buttons */
       .prev,
       .next {
+        font-size: 3vw !important;   
         cursor: pointer;
         position: absolute;
         top: 40%;
@@ -475,4 +476,12 @@
       .active,
       .demo:hover {
         opacity: 1;
+      }
+
+      .event-link-text:hover { 
+          cursor: default;
+      }
+
+      .event-link-text-short:hover { 
+          cursor: default;
       }

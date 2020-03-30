@@ -43,17 +43,33 @@
 
 #title { 
     width:100%;
-    padding: 5px;
+    padding: 5px 10%;
     text-align: right;
 }
 
+#picked-image {
+  width: 80%;display: block;margin: auto;
+}
+
 #title h1{
-    font-size: 2.2vw;
+    font-size: 1.8vw;
     font-weight: 800;
 }
 
 
 @media (max-width: 900px) {
+  #picked-image {
+    width: 100%;
+  }
+  #title { 
+    width:100%;
+    padding: 5px 10px;
+    text-align: right;
+}
+
+.row { 
+  padding:0 10px;
+}
     #to-video { 
         flex: 1;
         padding: 10px;
@@ -75,7 +91,7 @@
     }
 
     #title h1 { 
-        font-size: 4vw;
+        font-size: 3.5vw;
     }
 
   }
@@ -102,21 +118,6 @@
   }
   
   /* Next & previous buttons */
-  .prev,
-  .next {
-    cursor: pointer;
-    position: absolute;
-    top: 40%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-  }
   
   /* Position the "next button" to the right */
   .next {

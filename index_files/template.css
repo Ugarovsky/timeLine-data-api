@@ -2546,7 +2546,7 @@ html[dir=ltr] .we-message-window.event-share-modal .share-wrapper > * {
   bottom: 170px;
   height: 45px;
   right: 0;
-  width: 50px;
+  width: 40px;
   font-size: 23px;
   z-index: 30;
   border-radius: 5px 0 0 0;
@@ -5551,9 +5551,80 @@ html[dir=ltr] .add-content-button--main {
   cursor: pointer;
 }
 
+#frame-video { 
+  height: 300px;
+}
+
+.prev { 
+  left: 1px;
+}
+
 @media screen and (max-width: 800px) {
   #close-img { 
-    width: 5vw;
+    width: 7vw;
+  }
+
+  #frame-video { 
+    height: 230px;
+  }
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50% !important;
+    width: auto;
+    font-size: 7vw !important;
+    padding: 4.5px !important;
+  }
+  .next {
+    right: -14px !important;
+    border-radius: 3px 0 0 3px;
+}
+  .prev {  
+    left: -14px !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  
+  .next {
+    right: -4px !important;
+    border-radius: 3px 0 0 3px;
+}
+  .prev { 
+    left: -4px !important;
   }
 }
 
+.year-title:hover, .c-alt:hover { 
+  cursor: default !important;
+}
+
+.year-info:hover .bg-background-light:hover{ 
+  cursor: default !important;
+} 
+
+.has-title{
+  height: 94px !important;
+}
+
+.nice-scroll-bar { 
+  height: 94px !important;
+}
+
+.timeline .thumb-block, .timeline.scrollable.default-skin .thumb-block {
+  flex: 1 !important;
+  margin: 3px 2px !important;
+}
+
+.timeline .images-list, .timeline.scrollable.default-skin .images-list {
+
+  padding: 10px 4px 60px 30px !important;
+}
+
+.year-event-list:hover, .nice-scroll-bar:hover, .year-info-event-link:hover, .event-link-text:hover, .year-title:hover, .c-alt:hover, .year-info:hover, .bg-background-light:hover{ 
+  cursor: default !important;
+}
+
+.event-link-text-short:hover { 
+  cursor: pointer !important;
+}
