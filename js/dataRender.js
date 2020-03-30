@@ -144,7 +144,7 @@ const getPopUp = (value) => {
     template.innerHTML = `
     <!-- Container for the image gallery -->
     <div class="conainer" style="width:90%;margin:auto;padding:20px;">
-    
+    <img src="./index_files/OOjs_UI_icon_close.svg.png" id="close-img" type="button" data-dismiss="modal">
       <!-- Full-width images with number text -->
     
     ${imageListTemplate[0]}

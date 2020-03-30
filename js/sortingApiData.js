@@ -2,7 +2,7 @@ const overview = document.getElementById('overview');
 const template = document.getElementById('popup-content');
 const data = Object.values(apiData).map((item,i) => {
     return {
-        name: Object.keys(apiData)[i],
+        name: item.title,
         albumDate: item.albumDate,
         albumYear: item.albumDate.slice(0, 4),
         items: Object.values(item.items).map(elem => {
@@ -54,13 +54,21 @@ const concatAlbumData = () => {
                 item.items.push(
                     {
                         name: element.name,
-                        data: element.albumDate,
+                        data: dateFormater(element.albumDate),
                         media: element.items
                     });
             }
         })
     })
     return albumByYear;
+}
+
+
+const dateFormater = (date) => { 
+
+    const dateToArray = date.split('-');
+    return `${dateToArray[2]}/${dateToArray[1]}/${dateToArray[0]}`
+
 }
 
 const sortAlbumData = concatAlbumData();

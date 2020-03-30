@@ -105,7 +105,7 @@
             html.bg-alt,
             body .bg-alt,
             body.bg-alt {
-                background-color: #2c9e96;
+                background-color: #fad163;
             } 
 
             
@@ -312,7 +312,7 @@
          body .timeline.scrollable.default-skin .scroll-bar,
          body .timeline .scroll-bar.horizontal,
          body .timeline.scrollable.default-skin .scroll-bar.horizontal {
-            background: #e3882a;
+            background: #668CD9;
          }
        
          /** timeline scrollbar - thumb **/
@@ -320,7 +320,7 @@
          body .timeline.scrollable.default-skin .scroll-bar .thumb,
          body .timeline .scroll-bar.horizontal .thumb,
          body .timeline.scrollable.default-skin .scroll-bar.horizontal .thumb {
-             background: #32a0aa;
+             background: #fad163;
          }
       
          /** timeline scrollbar - thumb **/

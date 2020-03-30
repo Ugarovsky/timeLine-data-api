@@ -2567,12 +2567,12 @@ html[dir=ltr] .we-message-window.event-share-modal .share-wrapper > * {
 }
 @media screen and (max-width: 1620px) {
   .timeline-wrapper .timeline-button {
-    bottom: 155px;
+    bottom: 145px;
   }
 }
 @media screen and (max-width: 800px) {
   .timeline-wrapper .timeline-button {
-    bottom: 240px;
+    bottom: 235px;
     height: 45px;
     width: 35px;
     font-size: 14px;
@@ -3704,7 +3704,6 @@ body.events {
 .main-timeline .main-background.shaded::after {
   content: ' ';
   position: absolute;
-  border-bottom: 15px solid #e3882a;
   top: 0;
   right: 0;
   width: 100%;
@@ -5541,3 +5540,20 @@ html[dir=ltr] .add-content-button--main {
   cursor: pointer;
 }
 /*# sourceMappingURL=template.css.map */
+
+#close-img { 
+  width: 3vw;
+  float: right;
+  margin: 2px 0;
+}
+
+#close-img:hover { 
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  #close-img { 
+    width: 5vw;
+  }
+}
+

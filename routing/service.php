@@ -8,6 +8,6 @@ $result = curl_exec($ch);
 ?>
 
 <script>
-    const apiData = JSON.parse(`<? echo $result ?>`);
+    const apiData = <? echo $result ?>;
     console.log(apiData);
 </script> 
